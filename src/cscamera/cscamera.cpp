@@ -468,7 +468,7 @@ bool CSCamera::restartCamera()
 
 bool CSCamera::connectCamera(CameraInfo info)
 {
-    qInfo() << "connectCamera, camera seiral : "<< info.serial;
+    qInfo() << "connectCamera, camera serial : "<< info.serial;
 
     m_cameraInfo.cameraInfo = info;
 
@@ -518,11 +518,11 @@ bool CSCamera::reconnectCamera()
 
 bool CSCamera::disconnectCamera()
 {
-    qInfo() << "CSCamera, begin disconenct camera";
+    qInfo() << "CSCamera, begin disconnect camera";
     disconnect(this, &CSCamera::updateParaSignal, this, &CSCamera::onParaUpdated);
 
     doDisconnectCamera();
-    qInfo() << "CSCamera, disconenct camera end";
+    qInfo() << "CSCamera, disconnect camera end";
 
     return true;
 }
@@ -966,7 +966,7 @@ void CSCamera::getUserParaPrivate(CAMERA_PARA_ID paraId, QVariant& value)
         value = QVariant::fromValue(m_extrinsics);
         break;
     default:
-        qDebug() << "unknow camera para : " << paraId;
+        qDebug() << "unknown camera para : " << paraId;
         break;
     }
 }
@@ -1006,7 +1006,7 @@ void CSCamera::setUserParaPrivate(CAMERA_PARA_ID paraId, QVariant value)
         setRgbResolution(value.toSize());
         return; 
     default:
-        qDebug() << "unknow camera para : " << paraId;
+        qDebug() << "unknown camera para : " << paraId;
         break;
     }
 
