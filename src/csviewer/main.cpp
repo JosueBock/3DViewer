@@ -46,8 +46,8 @@ int main(int argc, char *argv[])
     // application information
     qInfo() << "";
     qInfo() << "****************************************";
-    qInfo() << "Applicaion Name : "     << APP_NAME;
-    qInfo() << "Applicaion Version : "  << APP_VERSION;
+    qInfo() << "Application Name : "     << APP_NAME;
+    qInfo() << "Application Version : "  << APP_VERSION;
     qInfo() << "****************************************";
 
     cs::CSApplication::getInstance()->start();
